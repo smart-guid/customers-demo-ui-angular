@@ -1,0 +1,24 @@
+<form id="form" name="form" [formGroup]="form"  #f="ngForm" (ngSubmit)="f.form.valid" novalidate >
+    <div class="form-row mb-3">
+        <label class="col-2 col-sm-1 col-form-label" for="name" >Name</label>
+        <div class="col-10 col-sm-11">
+            <input-text [form]="form" controlName="name" type="text"autocomplete="off"
+            icon="fa fa-align-justify"  requiredText="required" placeholderText="Name"
+            [text]="item.name" (onTextChanged)="onNameChanged($event)"></input-text>
+        </div>
+    </div>
+    <div class="form-row mb-3">
+        <label class="col-2 col-sm-1 col-form-label" for="category" >Category</label>
+        <div class="col-10 col-sm-11">
+            <input-text [form]="form" controlName="category" type="text"  autocomplete="off"
+            icon="fa fa-align-justify" requiredText="required" placeholderText="Category"
+            [text]="item.category" (onTextChanged)="onCategoryChanged($event)"></input-text>
+        </div>
+    </div>     
+</form>
+<div class="col-4 col-sm-11">
+    <button  type="submit" class="btn btn-success btn-sm"        
+    tooltip="Save Customer"    (click)="saveCustomer()" [disabled]="!f.form.valid">
+        Save Customer
+    </button>   
+</div>

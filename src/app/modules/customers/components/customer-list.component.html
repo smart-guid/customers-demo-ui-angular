@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-md-6" *ngFor="let item of items">
+      <div class="card">    
+          <div class="card-body" >         
+            <div class="row">
+                <div class="col-md-3">
+                    <a (click)="onEdit(item)" class="pointer-link">
+                        
+                    </a>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <a (click)="onEdit(item)" class="pointer-link h3">
+                                <span>{{item.name}}</span>
+                            </a>
+                        </div>
+                        <div class="col-md-2 float-right">
+                            <div class="btn-group" role="group">
+                            <button class="btn  mr-2" (click)="onEdit(item)" tooltip="Edit Customer">
+                               Edit
+                            </button>
+                            <button class="btn  mr-2" (click)="onDelete(item)" tooltip="Delete Customer">
+                                Delete
+                            </button>
+                        </div>
+                        </div>
+                    </div>                   
+                </div>
+            </div>
+        </div>         
+      </div>
+    </div>
+  </div>

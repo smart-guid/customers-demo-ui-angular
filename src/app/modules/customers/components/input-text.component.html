@@ -1,0 +1,16 @@
+<div class="input-group mb-3" [ngClass]="{ 'input-group-focus': focus === true }">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><i [class]="icon"></i></span>
+    </div>
+    <input #input 
+          [placeholder]="placeholderText" 
+          [type]="type"
+          [autocomplete]="autocomplete"
+          [autofocus]="autofocus"
+          [attr.maxlength]="maxLength"
+          [formControl]="dataControl"
+          class="form-control"
+          name="field" 
+          (blur)="focus = false"
+          (focus)="focus = true"/>
+  </div>
